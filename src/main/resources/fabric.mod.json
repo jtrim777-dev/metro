@@ -1,0 +1,42 @@
+{
+  "schemaVersion": 1,
+  "id": "metro",
+  "version": "${version}",
+  "name": "Metro",
+  "description": "Modifications to Minecraft's Villages to make them a more lively metropolis",
+  "authors": [
+    "jtrim777"
+  ],
+  "contact": {
+    "homepage": "???",
+    "sources": "???"
+  },
+  "license": "CC0-1.0",
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      {
+        "adapter": "scala",
+        "value": "dev.jtrim777.metro.MetroMod"
+      }
+    ],
+    "client": [
+      {
+        "adapter": "scala",
+        "value": "dev.jtrim777.metro.MetroModClient"
+      }
+    ]
+  },
+  "mixins": [
+    "metro.mixins.json"
+  ],
+  "requires": {
+        "fabric-language-scala": "*"
+  },
+  "depends": {
+    "fabricloader": ">=0.14.9",
+    "fabric-api": "*",
+    "minecraft": "~1.19",
+    "java": ">=17"
+  }
+}

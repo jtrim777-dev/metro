@@ -1,0 +1,9 @@
+{
+  "item.metro.copper_coin": "Copper Coin",
+  "item.metro.iron_coin": "Iron Coin",
+  "item.metro.gold_coin": "Gold Coin",
+  "item.metro.coin.value_tooltip": "%d Cubits",
+  "item.metro.coin.value_tooltip_single": "1 Cubit",
+  "item.metro.coin_pouch": "Coin Pouch",
+  "item.metro.coin_pouch.empty_tooltip": "Empty"
+}

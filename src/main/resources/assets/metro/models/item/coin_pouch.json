@@ -1,0 +1,17 @@
+{
+  "parent": "item/generated",
+  "overrides": [
+    {
+      "predicate": {
+        "metro:filled": 0
+      },
+      "model": "metro:item/coin_pouch_empty"
+    },
+    {
+      "predicate": {
+        "metro:filled": 1
+      },
+      "model": "metro:item/coin_pouch_full"
+    }
+  ]
+}
