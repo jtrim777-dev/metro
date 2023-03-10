@@ -1,0 +1,71 @@
+{
+  "ambientocclusion" : false,
+  "textures" : {
+    "particle" : "minecraft:block/oak_planks",
+    "stake" : "minecraft:block/oak_planks"
+  },
+  "elements" : [
+    {
+      "name" : "body",
+      "from" : [ 7, -1, 7 ],
+      "to" : [ 9, 15, 9 ],
+      "faces" : {
+        "up": {
+          "uv": [
+            7,
+            3,
+            9,
+            5
+          ],
+          "texture": "#stake"
+        },
+        "down": {
+          "uv": [
+            7,
+            3,
+            9,
+            5
+          ],
+          "texture": "#stake"
+        },
+        "east": {
+          "uv": [
+            6,
+            0,
+            8,
+            16
+          ],
+          "texture": "#stake"
+        },
+        "west": {
+          "uv": [
+            10,
+            0,
+            12,
+            16
+          ],
+          "texture": "#stake"
+        },
+        "north": {
+          "uv": [
+            4,
+            0,
+            6,
+            16
+          ],
+          "texture": "#stake"
+        },
+        "south": {
+          "uv": [
+            8,
+            0,
+            10,
+            16
+          ],
+          "texture": "#stake"
+        }
+      },
+      "shade" : false
+    }
+  ]
+}

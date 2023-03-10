@@ -6,7 +6,7 @@ import net.minecraft.entity.attribute.DefaultAttributeContainer
 
 object EntityAttributes {
   def register(): Unit = {
-    registerOne(Entities.MetropoliteType, Metropolite.attributes)
+//    registerOne(Entities.MetropoliteType, Metropolite.attributes)
   }
 
   private def registerOne(entityType: EntityType[_ <: LivingEntity], attrs: DefaultAttributeContainer.Builder): Unit = {

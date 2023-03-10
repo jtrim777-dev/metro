@@ -10,9 +10,9 @@ object Entities extends DelayedRegistry[EntityType[_]] {
   override def registry: Registry[EntityType[_]] = Registry.ENTITY_TYPE
   override def namespace: String = MetroMod.ModID
 
-  @registered lazy val MetropoliteType: EntityType[Metropolite] = FabricEntityTypeBuilder
-    .create(SpawnGroup.MISC, Metropolite.apply)
-    .dimensions(EntityDimensions.fixed(0.6f, 1.95f))
-    .trackRangeChunks(10)
-    .build()
+//  @registered lazy val MetropoliteType: EntityType[Metropolite] = FabricEntityTypeBuilder
+//    .create(SpawnGroup.MISC, Metropolite.apply)
+//    .dimensions(EntityDimensions.fixed(0.6f, 1.95f))
+//    .trackRangeChunks(10)
+//    .build()
 }

@@ -8,3 +8,6 @@ pluginManagement {
         gradlePluginPortal()
     }
 }
+
+//include ":needle"
+//project(":needle").projectDir = new File("../needle")

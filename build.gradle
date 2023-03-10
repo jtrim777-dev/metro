@@ -18,10 +18,10 @@ repositories {
 	// See https://docs.gradle.org/current/userguide/declaring_repositories.html
 	// for more information about repositories.
 
-//	maven {
-//		name = "jtrim777"
-//		url = "https://maven.jtrim777.dev/releases"
-//	}
+	maven {
+		name = "jtrim777"
+		url = "https://maven.jtrim777.dev/releases"
+	}
 	mavenLocal()
 }
 
@@ -36,7 +36,8 @@ dependencies {
 	modImplementation 'com.chuusai:shapeless_2.13:2.3.10'
 //	modImplementation "com.lihaoyi:ammonite_2.13.6:2.5.5"
 //	modImplementation "com.lihaoyi:ammonite-sshd_2.13.6:2.5.5"
-	modImplementation "dev.jtrim777:needle:0.1.4-a11"
+	modImplementation "dev.jtrim777:needle:0.1.4"
+//	modImplementation project(":needle")
 
 	modImplementation "net.fabricmc:fabric-loader:${project.loader_version}"
 	modImplementation "net.fabricmc:fabric-language-scala:1.0.0"

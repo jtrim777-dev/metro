@@ -1,0 +1,28 @@
+{
+  "multipart" : [
+    {
+      "when" : { "age" : "0"},
+      "apply" : { "model" :  "metro:block/vine0"}
+    },
+    {
+      "when" : { "age" : "1"},
+      "apply" : { "model" :  "metro:block/vine1"}
+    },
+    {
+      "when" : { "age" : "2"},
+      "apply" : { "model" :  "metro:block/vine2"}
+    },
+    {
+      "when" : { "age" : "3"},
+      "apply" : { "model" :  "metro:block/vine3"}
+    },
+    {
+      "when" : { "age" : "4"},
+      "apply" : { "model" :  "metro:block/grape_vine4"}
+    },
+    {
+      "when" : { "age" : "5"},
+      "apply" : { "model" :  "metro:block/grape_vine5"}
+    }
+  ]
+}

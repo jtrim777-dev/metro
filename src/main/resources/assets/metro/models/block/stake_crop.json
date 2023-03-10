@@ -1,0 +1,231 @@
+{
+  "ambientocclusion" : false,
+  "textures" : {
+    "particle" : "minecraft:block/oak_planks",
+    "stake" : "minecraft:block/oak_planks"
+  },
+  "elements" : [
+    {
+      "name" : "stake_body",
+      "from" : [ 7, -1, 7 ],
+      "to" : [ 9, 15, 9 ],
+      "faces" : {
+        "up": {
+          "uv": [
+            7,
+            3,
+            9,
+            5
+          ],
+          "texture": "#stake"
+        },
+        "down": {
+          "uv": [
+            7,
+            3,
+            9,
+            5
+          ],
+          "texture": "#stake"
+        },
+        "east": {
+          "uv": [
+            6,
+            0,
+            8,
+            16
+          ],
+          "texture": "#stake"
+        },
+        "west": {
+          "uv": [
+            10,
+            0,
+            12,
+            16
+          ],
+          "texture": "#stake"
+        },
+        "north": {
+          "uv": [
+            4,
+            0,
+            6,
+            16
+          ],
+          "texture": "#stake"
+        },
+        "south": {
+          "uv": [
+            8,
+            0,
+            10,
+            16
+          ],
+          "texture": "#stake"
+        }
+      },
+      "shade" : false
+    },
+    {
+      "name" : "cross_ew",
+      "from" : [8, -1, 0],
+      "to" : [8, 15, 16],
+      "faces" : {
+        "east" : {
+          "texture" : "#plant",
+          "uv" : [ 0, 1, 16, 16]
+        },
+        "west" : {
+          "texture" : "#plant",
+          "uv" : [ 0, 1, 16, 16]
+        }
+      },
+      "shade": false
+    },
+    {
+      "name" : "cross_ns",
+      "from" : [0, -1, 8],
+      "to" : [16, 15, 8],
+      "faces" : {
+        "north" : {
+          "texture" : "#plant",
+          "uv" : [ 0, 1, 16, 16]
+        },
+        "south" : {
+          "texture" : "#plant",
+          "uv" : [ 0, 1, 16, 16]
+        }
+      },
+      "shade": false
+    },
+    {
+      "name" : "crop_n_1",
+      "from" : [3, -1, 3],
+      "to" : [8, 15, 3],
+      "faces" : {
+        "north" : {
+          "texture" : "#plant",
+          "uv" : [ 2, 1, 7, 16]
+        },
+        "south" : {
+          "texture" : "#plant",
+          "uv" : [ 2, 1, 7, 16]
+        }
+      },
+      "shade": false
+    },
+    {
+      "name" : "crop_n_2",
+      "from" : [8, -1, 3],
+      "to" : [13, 15, 3],
+      "faces" : {
+        "north" : {
+          "texture" : "#plant",
+          "uv" : [ 2, 1, 9, 16]
+        },
+        "south" : {
+          "texture" : "#plant",
+          "uv" : [ 2, 1, 9, 16]
+        }
+      },
+      "shade": false
+    },
+    {
+      "name" : "crop_s_1",
+      "from" : [3, -1, 13],
+      "to" : [8, 15, 13],
+      "faces" : {
+        "north" : {
+          "texture" : "#plant",
+          "uv" : [ 2, 1, 7, 16]
+        },
+        "south" : {
+          "texture" : "#plant",
+          "uv" : [ 2, 1, 7, 16]
+        }
+      },
+      "shade": false
+    },
+    {
+      "name" : "crop_s_2",
+      "from" : [8, -1, 13],
+      "to" : [13, 15, 13],
+      "faces" : {
+        "north" : {
+          "texture" : "#plant",
+          "uv" : [ 2, 1, 9, 16]
+        },
+        "south" : {
+          "texture" : "#plant",
+          "uv" : [ 2, 1, 9, 16]
+        }
+      },
+      "shade": false
+    },
+    {
+      "name" : "crop_w_1",
+      "from" : [3, -1, 3],
+      "to" : [3, 15, 8],
+      "faces" : {
+        "east" : {
+          "texture" : "#plant",
+          "uv" : [ 2, 1, 7, 16]
+        },
+        "west" : {
+          "texture" : "#plant",
+          "uv" : [ 2, 1, 7, 16]
+        }
+      },
+      "shade": false
+    },
+    {
+      "name" : "crop_w_2",
+      "from" : [3, -1, 8],
+      "to" : [3, 15, 13],
+      "faces" : {
+        "east" : {
+          "texture" : "#plant",
+          "uv" : [ 2, 1, 9, 16]
+        },
+        "west" : {
+          "texture" : "#plant",
+          "uv" : [ 2, 1, 9, 16]
+        }
+      },
+      "shade": false
+    },
+    {
+      "name" : "crop_e_1",
+      "from" : [13, -1, 3],
+      "to" : [13, 15, 8],
+      "faces" : {
+        "east" : {
+          "texture" : "#plant",
+          "uv" : [ 2, 1, 7, 16]
+        },
+        "west" : {
+          "texture" : "#plant",
+          "uv" : [ 2, 1, 7, 16]
+        }
+      },
+      "shade": false
+    },
+    {
+      "name" : "crop_e_2",
+      "from" : [13, -1, 8],
+      "to" : [13, 15, 13],
+      "faces" : {
+        "east" : {
+          "texture" : "#plant",
+          "uv" : [ 2, 1, 9, 16]
+        },
+        "west" : {
+          "texture" : "#plant",
+          "uv" : [ 2, 1, 9, 16]
+        }
+      },
+      "shade": false
+    }
+  ]
+}
