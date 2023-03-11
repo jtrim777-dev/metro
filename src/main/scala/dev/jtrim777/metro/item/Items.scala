@@ -13,9 +13,8 @@ import net.minecraft.util.registry.Registry
 
   override def namespace: String = MetroMod.ModID
 
-  def get(id: String): Item = Registry.ITEM.get(new Identifier(namespace, id))
-  def ofBlock(b: => Block, group: ItemGroup): Item = new BlockItem(b, (new Item.Settings).group(group))
-  def food(component: FoodComponent): Item = new Item((new Item.Settings).food(component).group(ItemGroup.FOOD))
+  private def ofBlock(b: => Block, group: ItemGroup): Item = new BlockItem(b, (new Item.Settings).group(group))
+  private def food(component: FoodComponent): Item = new Item((new Item.Settings).food(component).group(ItemGroup.FOOD))
 
   @registered lazy val CopperCoin: Item = new Coin(Coin.CopperValue)
   @registered lazy val IronCoin: Item = new Coin(Coin.IronValue)

@@ -1,7 +1,7 @@
 package dev.jtrim777
 
-import net.minecraft.util.Identifier
+import dev.jtrim777.needle.util.ModContext
 
 package object metro {
-  def id(name: String): Identifier = new Identifier(MetroMod.ModID, name)
+  implicit val ctx: ModContext = ModContext.Simple(MetroMod.ModID)
 }

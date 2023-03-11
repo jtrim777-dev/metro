@@ -1,11 +1,13 @@
 package dev.jtrim777.metro.item
 
-import dev.jtrim777.metro.id
 import net.minecraft.client.item.ModelPredicateProviderRegistry
 import net.minecraft.client.world.ClientWorld
 import net.minecraft.entity.LivingEntity
 import net.minecraft.item.ItemStack
 import net.minecraft.util.registry.Registry
+import dev.jtrim777.metro.ctx
+import dev.jtrim777.needle.util.syntax.IdHelper
+
 
 object ItemProperties {
   def register(): Unit = {
@@ -15,7 +17,7 @@ object ItemProperties {
   }
 
   def registerOne(itemName: String, property: String)(provider: (ItemStack, ClientWorld, LivingEntity) => Float): Unit = {
-    ModelPredicateProviderRegistry.register(Registry.ITEM.get(id(itemName)), id(property),
+    ModelPredicateProviderRegistry.register(Registry.ITEM.get(id"$itemName"), id"$property",
       (stack: ItemStack, world: ClientWorld, entity: LivingEntity, _: Int) => provider(stack, world, entity))
   }
 }

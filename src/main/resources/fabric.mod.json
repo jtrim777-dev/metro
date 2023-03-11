@@ -31,7 +31,7 @@
     "metro.mixins.json"
   ],
   "requires": {
-        "fabric-language-scala": "*"
+    "fabric-language-scala": "*"
   },
   "depends": {
     "fabricloader": ">=0.14.9",

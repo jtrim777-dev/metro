@@ -1,9 +1,7 @@
 package dev.jtrim777.metro.item
 
-import dev.jtrim777.metro.MetroMod
 import dev.jtrim777.needle.enrich.EnrichedItem
 import dev.jtrim777.needle.inv.Inventory
-import dev.jtrim777.needle.nbt.NBTDecoder
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings
 import net.minecraft.item.{ItemGroup, ItemStack, ItemUsageContext}
 import dev.jtrim777.needle.nbt.generic._
@@ -133,9 +131,9 @@ object CoinPouch {
     def add(c: Int, i: Int, g: Int): Data = this.copy(copper = copper + c, iron = iron + i, gold = gold + g)
 
     def asItems: List[ItemStack] = {
-      val golds = if (gold > 0) Some(new ItemStack(Items.get("gold_coin"))) else None
-      val irons = if (iron > 0) Some(new ItemStack(Items.get("iron_coin"))) else None
-      val coppers = if (copper > 0) Some(new ItemStack(Items.get("copper_coin"))) else None
+      val golds = if (gold > 0) Some(new ItemStack(Items.lookup("gold_coin"))) else None
+      val irons = if (iron > 0) Some(new ItemStack(Items.lookup("iron_coin"))) else None
+      val coppers = if (copper > 0) Some(new ItemStack(Items.lookup("copper_coin"))) else None
 
       List(golds, irons, coppers).flatten
     }

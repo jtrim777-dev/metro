@@ -20,7 +20,7 @@ case class StakedPlantSeed(plant: StakedPlant.Root) extends Item(StakedPlantSeed
       context.getStack.decrement(1)
       ActionResult.success(world.isClient)
     } else {
-      val tpup = (tgtPos.up():BlockPos)
+      val tpup = tgtPos.up():BlockPos
       val tup = world.getBlockState(tpup)
 
       if (canPlantOn(tup, tpup, world)) {
@@ -33,11 +33,11 @@ case class StakedPlantSeed(plant: StakedPlant.Root) extends Item(StakedPlantSeed
     }
   }
 
-  def canPlantOn(state: BlockState, pos: BlockPos, world: World): Boolean = {
+  private def canPlantOn(state: BlockState, pos: BlockPos, world: World): Boolean = {
     state.isOf(Blocks.Stake) && !state.get(StakeBlock.Waterlogged) && plant.isPositionValid(pos, world)
   }
 
-  def plant(pos: BlockPos, world: World): Unit = {
+  private def plant(pos: BlockPos, world: World): Unit = {
     world.setBlockState(pos, this.plant.getDefaultState)
   }
 }
