@@ -4,7 +4,9 @@
   "package": "dev.jtrim777.metro.mixin",
   "compatibilityLevel": "JAVA_17",
   "mixins": [
-    "FarmlandBlockMixin"
+    "EntityMixin",
+    "FarmlandBlockMixin",
+    "LivingEntityMixin"
   ],
   "client": [
   ],

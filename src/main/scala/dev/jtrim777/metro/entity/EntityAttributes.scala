@@ -1,15 +1,14 @@
 package dev.jtrim777.metro.entity
 
-import net.fabricmc.fabric.api.`object`.builder.v1.entity.FabricDefaultAttributeRegistry
-import net.minecraft.entity.{EntityType, LivingEntity}
-import net.minecraft.entity.attribute.DefaultAttributeContainer
+import dev.jtrim777.metro.MetroMod
+import dev.jtrim777.needle.registry.{DelayedRegistry, registered, registry}
+import net.minecraft.entity.attribute.{ClampedEntityAttribute, EntityAttribute}
+import net.minecraft.util.registry.Registry
 
-object EntityAttributes {
-  def register(): Unit = {
-//    registerOne(Entities.MetropoliteType, Metropolite.attributes)
-  }
+@registry
+object EntityAttributes extends DelayedRegistry[EntityAttribute] {
+  override def registry: Registry[EntityAttribute] = Registry.ATTRIBUTE
+  override def namespace: String = MetroMod.ModID
 
-  private def registerOne(entityType: EntityType[_ <: LivingEntity], attrs: DefaultAttributeContainer.Builder): Unit = {
-    FabricDefaultAttributeRegistry.register(entityType, attrs)
-  }
+  @registered lazy val StepHeightBonus = new ClampedEntityAttribute(s"generic.$namespace.step-height-bonus", 0f, -1024f, 1024f)
 }

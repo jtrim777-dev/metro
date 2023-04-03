@@ -20,7 +20,8 @@ repositories {
 
 	maven {
 		name = "jtrim777"
-		url = "https://maven.jtrim777.dev/releases"
+//		url = "https://maven.jtrim777.dev/releases"
+		url = "https://maven.jtrim777.dev/snapshots"
 	}
 	mavenLocal()
 }

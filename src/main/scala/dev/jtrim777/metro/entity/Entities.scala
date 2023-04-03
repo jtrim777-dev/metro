@@ -2,7 +2,6 @@ package dev.jtrim777.metro.entity
 
 import dev.jtrim777.metro.MetroMod
 import dev.jtrim777.needle.registry.{DelayedRegistry, registered}
-import net.fabricmc.fabric.api.`object`.builder.v1.entity.FabricEntityTypeBuilder
 import net.minecraft.entity.{EntityDimensions, EntityType, SpawnGroup}
 import net.minecraft.util.registry.Registry
 
