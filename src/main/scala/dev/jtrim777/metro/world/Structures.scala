@@ -10,15 +10,15 @@ object Structures {
   private val Log: Logger = LogManager.getLogger(s"metro:structures")
 
   def init(): Unit = {
-    Log.info("Registering mod structures")
-    this.registerPoolOverrides()
+//    Log.info("Registering mod structures")
+//    this.registerPoolOverrides()
   }
 
   private def registerPoolOverrides(): Unit = {
-    StructurePoolRegistry.registerSimple(vanilla"village/plains/houses")(
-      id = id"village/plains/plains_vineyard",
-      weight = 3,
-      projection = Projection.TERRAIN_MATCHING
-    )
+//    StructurePoolRegistry.registerSimple(vanilla"village/plains/houses")(
+//      id = id"village/plains/plains_vineyard",
+//      weight = 3,
+//      projection = Projection.TERRAIN_MATCHING
+//    )
   }
 }

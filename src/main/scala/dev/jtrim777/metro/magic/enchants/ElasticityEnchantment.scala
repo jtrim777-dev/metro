@@ -1,6 +1,6 @@
 package dev.jtrim777.metro.magic.enchants
 
-import dev.jtrim777.metro.entity.EntityAttributes
+import dev.jtrim777.metro.entity.ModEntityAttributes
 import net.minecraft.enchantment.{Enchantment, EnchantmentTarget}
 import net.minecraft.enchantment.Enchantment.Rarity
 import net.minecraft.entity.EquipmentSlot
@@ -16,13 +16,15 @@ class ElasticityEnchantment extends Enchantment(Rarity.RARE, EnchantmentTarget.A
   override def isAvailableForRandomSelection: Boolean = false
 
   override def getAttributeMods(slot: EquipmentSlot, stack: ItemStack, level: Int): Map[EntityAttribute, List[EntityAttributeModifier]] = {
-    val bonus: Double = 0.5 * level
+    if (slot == EquipmentSlot.FEET) {
+      val bonus: Double = 0.5 * level
 
-    Map(
-      EntityAttributes.StepHeightBonus -> List(
-        new EntityAttributeModifier(ElasticityEnchantment.ModID, "Elasticity step-height bonus", bonus, Operation.ADDITION)
+      Map(
+        ModEntityAttributes.StepHeightBonus -> List(
+          new EntityAttributeModifier(ElasticityEnchantment.ModID, "Elasticity step-height bonus", bonus, Operation.ADDITION)
+        )
       )
-    )
+    } else Map.empty
   }
 
 

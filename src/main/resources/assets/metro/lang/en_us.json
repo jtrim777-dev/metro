@@ -11,5 +11,6 @@
   "block.metro.stake": "Stake",
   "block.metro.grape_vine_root": "Grape Vine",
   "block.metro.grape_vine_ext": "Grape Vine",
-  "enchantment.metro.elasticity": "Elasticity"
+  "enchantment.metro.elasticity": "Elasticity",
+  "generic.metro.step-height-bonus": "Step Height"
 }
