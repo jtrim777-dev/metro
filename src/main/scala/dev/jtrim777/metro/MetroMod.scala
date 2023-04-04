@@ -1,7 +1,7 @@
 package dev.jtrim777.metro
 
 import dev.jtrim777.metro.block.Blocks
-import dev.jtrim777.metro.entity.ModEntityAttributes
+import dev.jtrim777.metro.entity.{ModEntityAttributes, PlayerAttributesUtil}
 import dev.jtrim777.metro.item.Items
 import dev.jtrim777.metro.magic.MagicModule
 import dev.jtrim777.metro.world.Structures
@@ -23,5 +23,7 @@ object MetroMod extends ModInitializer {
         MagicModule.commonInit()
 
         Structures.init()
+
+        PlayerAttributesUtil.registerServerHandler()
     }
 }

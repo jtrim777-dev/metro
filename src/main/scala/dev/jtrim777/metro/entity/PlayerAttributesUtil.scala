@@ -1,8 +1,11 @@
 package dev.jtrim777.metro.entity
 
-import com.google.common.collect.{Multimap, Multimaps}
+import com.google.common.collect.{ArrayListMultimap, Multimap, Multimaps}
+import dev.jtrim777.metro.MetroMod
 import net.fabricmc.fabric.api.client.networking.v1.ClientPlayNetworking
+import net.fabricmc.fabric.api.networking.v1.ServerPlayConnectionEvents
 import net.minecraft.client.network.ClientPlayerEntity
+import net.minecraft.entity.EquipmentSlot
 import net.minecraft.entity.attribute.{EntityAttribute, EntityAttributeModifier}
 import net.minecraft.server.network.ServerPlayerEntity
 import net.minecraft.util.Identifier
@@ -29,6 +32,8 @@ object PlayerAttributesUtil {
   private def receiveUpdates(player: ClientPlayerEntity, packet: ClientEquipAttrsPacket): Unit = {
     val attrs = player.getAttributes
 
+//    MetroMod.Log.info(s"Player $player told to add attrs ${packet.add} and remove ${packet.remove}")
+
     packet.remove.foreachEntry { (id, mods) =>
       val tgt = Registry.ATTRIBUTE.get(id)
       val attr = attrs.getCustomInstance(tgt)
@@ -50,6 +55,21 @@ object PlayerAttributesUtil {
           receiveUpdates(player, msg)
         }
       })
+  }
+
+  def registerServerHandler(): Unit = {
+    ServerPlayConnectionEvents.JOIN.register { (handler, _, _) =>
+      val player = handler.player
+      val equippedAttrs = EquipmentSlot.values()
+        .map(slot => player.getEquippedStack(slot).getAttributeModifiers(slot))
+        .filter(s => !s.isEmpty)
+        .foldLeft(ArrayListMultimap.create[EntityAttribute, EntityAttributeModifier]()) { (l, r) =>
+          l.putAll(r)
+          l
+        }
+
+      syncUpdates(null, equippedAttrs, player)
+    }
   }
 
   private def convertAttrs[T](raw: Multimap[EntityAttribute, EntityAttributeModifier], f: EntityAttributeModifier => T): Map[Identifier, List[T]] = {
