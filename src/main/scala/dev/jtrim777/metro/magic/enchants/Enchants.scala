@@ -11,4 +11,5 @@ object Enchants extends DelayedRegistry[Enchantment] {
   override def namespace: String = MetroMod.ModID
 
   @registered lazy val Elasticity = new ElasticityEnchantment
+  @registered lazy val Celerity = new CelerityEnchantment
 }

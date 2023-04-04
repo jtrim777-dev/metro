@@ -31,5 +31,5 @@ class ElasticityEnchantment extends Enchantment(Rarity.RARE, EnchantmentTarget.A
 }
 
 object ElasticityEnchantment {
-  private val ModID = UUID.randomUUID()
+  private val ModID = UUID.fromString("096c95fa-c4bb-4b7e-9681-5db61b9f960f")
 }
